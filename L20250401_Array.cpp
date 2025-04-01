@@ -1,35 +1,36 @@
 #include <iostream>
-#include <conio.h>
 
 using namespace std;
 
 int main()
 {
-	int Map[10][10] =
-	{
-		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
-	};
+	int MaxCount = 0;
 
+	cin >> MaxCount;
 
-	for (int y = 0; y < 10; ++y)
+	for (int j = 0; j < MaxCount; ++j)
 	{
-		for (int x = 0; x < 10; ++x)
+		for (int i = 0; i < j + 1; ++i) // ÇÑÁÙÂï±â
 		{
-			cout << Map[y][x];
+			cout << "*";
 		}
-
 		cout << endl;
 	}
 
+	for (int j = 0; j < MaxCount; ++j)
+	{
+		for (int i = 0; i < MaxCount - j; ++i) // ÇÑÁÙÂï±â
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+
+	//*****
+	//****
+	//***
+	//**
+	//*
 
 
 	return 0;
