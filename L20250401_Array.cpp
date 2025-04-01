@@ -4,46 +4,38 @@ using namespace std;
 
 int main()
 {
-	int MaxCount = 0;
+	int Inventory[10] = { 0, };
 
-	cin >> MaxCount;
-
-	for (int j = 0; j < MaxCount; ++j)
+	int Map[10][10] =
 	{
-		for (int i = 0; i < j + 1; ++i) // ÇÑÁÙÂï±â
+		{0,},
+		{0,},
+		{0,},
+	};
+
+//  	--->
+//      |
+//	    |
+//	    v
+	bool IsRunning = true;
+
+	char Key = 0;
+	while (IsRunning)
+	{
+		cin >> Key;
+
+		//Process
+		//==, !=, >, <, <=, >=
+		if (Key == 'Q')
 		{
-			cout << "*";
+			IsRunning = false;
 		}
-		cout << endl;
+
+		//Render
+		cout << "¸ð¿©¶ó »çÁøÂïÀÚ. ¿òÁ÷ÀÌ¸é Á×´Â´Ù." << endl;
 	}
 
-	for (int j = 0; j < MaxCount; ++j)
-	{
-		for (int i = 0; i < MaxCount - j; ++i) // ÇÑÁÙÂï±â
-		{
-			cout << "*";
-		}
-		cout << endl;
-	}
 
-	for (int j = 0; j < MaxCount; ++j)
-	{
-		for (int i = 0; i < j ; ++i) // ÇÑÁÙÂï±â
-		{
-			cout << " ";
-		}
-		for (int i = 0; i < MaxCount - j; ++i) // ÇÑÁÙÂï±â
-		{
-			cout << "*";
-		}
-		cout << endl;
-	}
-
-	//*****
-	// ****
-	//  ***
-	//   **
-	//    *
 
 
 	return 0;
